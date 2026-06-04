@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Pizza | Pizza Hotline</title>
-    <link rel="stylesheet" href="stylesheets/style-test.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
     <header>
@@ -19,18 +19,26 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="locations.html">Locations</a></li>
           <li><a href="fundraising.html">Fundraising</a></li>
-          <li><a href="about-us.html" id="about-us">About Us</a></li>
+          <li><a href="about-us.html">About Us</a></li>
         </ul>
       </nav>
-      <button class="menu-btn" id="menuBtn">☰</button>
     </header>
-    <script>
-      const menuBtn = document.getElementById("menuBtn");
-      const navbar = document.getElementById("navbar");
+    <main>
+      <section class="text-box">
+        <h2>Where are we delivering to?</h2>
+        <button>Enter Address</button>
+      </section>
 
-      menuBtn.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-      });
-    </script>
+      <section class="deals">
+        <h2>Fresh Deals</h2>
+        <div class="deal-grid">
+          <img src="images/pizza-hotline-party-pack.jpg" alt="4XL Party Pack" />
+          <img src="images/pizza-hotline-day.jpg" alt="It's Pizza Hotline Day! Get a personal pizza for only $2.22!" />
+          <img src="images/pizza-feast.jpg" alt="Two pizzas, a salad, three cans of Pepsi, and five pizza boxes on a red table." />
+        </div>
+    </main>
+    <footer>
+      <p> &#169;Pizza Hotline, used under license. &#169;Pizza Hotline 2026.</p>
+    </footer>
   </body>
 </html>
