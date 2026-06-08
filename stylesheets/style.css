@@ -5,27 +5,44 @@
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*I set the font family to first try to use Trebuchet MS, and if that doesn't work, try Lucida Grande, and 
+  then if it doesn't work, try Lucida Sans Unicode. If that doesn't work, then the website will use the default 
+  sans-serif font. */
+  font-family:
+    Trebuchet MS,
+    Lucida Grande,
+    Lucida Sans Unicode,
+    sans-serif;
+  /*I set the background to ghostwhite because I wanted the website to be a light mode website. I used ghostwhite 
+  because pure white can lead to visual fatigue. */
   background: ghostwhite;
   margin: 0;
   padding: 0;
+  /*I set the width and height properties to 100% so that the content would stretch to cover the whole page. */
   width: 100%;
   height: 100%;
 }
 
 header {
+  /*Makes the header a flex container so that it can wrap and resize at different screen widths. */
   display: flex;
+  /*I spaced all the content out with justify-content and used align-items to center them vertically. */
   justify-content: space-between;
   align-items: center;
+  /*Added 15 pixels of padding around the header content to add some null space. */
   padding: 15px;
-  background-color: #ef4739;
+  /*Set the background color to a dark reddish color. The original Pizza Hotline color is #ef4739, 
+  but it wouldn't have a good contrast ratio with my text if it was used, so I made it darker. */
+  background-color: #a41919;
 }
 
 h2 {
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 #logo {
+  /*Sets the width to 25% and makes it so that the Pizza Hotline Logo cannot get smaller thn 300px. */
   width: 25%;
   min-width: 300px;
 }
@@ -34,7 +51,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #ef4739;
+  background-color: #a41919;
   padding: 1rem;
   width: 800px;
 }
@@ -64,19 +81,19 @@ nav ul li a {
   text-decoration: none;
   text-align: center;
   font-weight: bolder;
-
-  transition: background-color ease-out 0.2s;
+  font-size: 1.1rem;
+  transition: ease-out 0.2s;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: #b52828;
+  background-color: #821010;
 }
 
 .text-box {
   width: 60%;
   background-color: ghostwhite;
-  color: #ef4739;
+  color: #a41919;
   box-shadow: 0px 0px 30px 5px #818181;
   border-radius: 10px;
   margin: 0px auto;
@@ -87,28 +104,48 @@ nav ul li a:focus {
 }
 
 .text-box p {
-  color: #121212;
+  color: #212121;
 }
 
-button {
-  display: block;
+.button {
+  display: inline-block;
   margin: 0 auto;
-  margin-top: 10px;
   padding: 0.5rem 2rem;
-  background-color: #ef4739;
+  background-color: #a41919;
   color: ghostwhite;
+  text-decoration: none;
   border: none;
   border-radius: 30px;
   font-weight: bold;
+  transition: ease-out 0.1s;
+  animation: shrink-grow 3s ease-in-out infinite;
+}
 
-  transition: background-color ease-out 0.2s;
+.button:hover,
+.button:focus {
+  background-color: #821010;
+}
+
+.text-input {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0.5rem 2rem;
+  background-color: ghostwhite;
+  color: #121212;
+  text-decoration: none;
+  border: 1px solid #121212;
+  border-radius: 30px;
+  font-weight: normal;
+  transition: ease-out 0.2s;
 }
 
 .deals {
   display: block;
   width: 60%;
   background-color: ghostwhite;
-  color: #ef4739;
+  color: #a41919;
   box-shadow: 0px 0px 30px 5px #818181;
   border-radius: 10px;
   margin: 0px auto;
@@ -132,6 +169,17 @@ button {
   border-radius: 10px;
   margin: 20px auto;
   padding: 1rem;
+  transition: ease-out 0.2s;
+}
+
+.deal-content figure:hover,
+.deal-content figure:focus {
+  transform: translateY(-5px);
+}
+
+figcaption {
+  margin-top: 10px;
+  color: #212121;
 }
 
 .deal-content img {
@@ -141,11 +189,45 @@ button {
   border-radius: 10px;
 }
 
+fieldset {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1rem;
+  border: 2px solid #121212;
+  border-radius: 10px;
+}
+
+input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bolder;
+  color: #a41919;
+}
+
+#map {
+  display: flex;
+  justify-content: center;
+}
+
+#map iframe {
+  border: 5px solid #a41919;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 20px 3px #818181;
+  flex: 0.3 0 200px;
+}
+
 footer {
   width: 100%;
   height: 100%;
   padding: 1rem;
-  background-color: #ef4739;
+  background-color: #a41919;
   color: ghostwhite;
   text-align: center;
 }
@@ -154,5 +236,17 @@ footer {
   nav ul li a {
     border-left: 3px solid ghostwhite;
     border-right: none;
+  }
+}
+
+@keyframes shrink-grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
   }
 }

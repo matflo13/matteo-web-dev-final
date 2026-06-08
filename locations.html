@@ -1,32 +1,53 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Order Pizza | Pizza Hotline</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
     <header>
-      <div class="logo">My Website</div>
-
-      <button class="menu-btn" id="menuBtn">☰</button>
-
-      <nav class="navbar" id="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+      <a href="index.html">
+        <img
+          src="images/pizza-hotline-logo.png"
+          alt="Pizza Hotline Logo"
+          id="logo" />
+      </a>
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="fundraising.html">Fundraising</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
       </nav>
     </header>
+    <main>
+      <section class="text-box">
+        <h2>Our Locations</h2>
+        <p>Our brand is proud to serve high-quality pizza in 29 locations across 
+          Manitoba. We have restaurants in Winnipeg, Brandon, Steinbach, Winkler, 
+          Selkirk, Stonewall, and Portage La Prairie. We work every day to bring 
+          you the best pizza Manitoba has to offer!
+        </p>
+      </section>
 
-    <script>
-      const menuBtn = document.getElementById("menuBtn");
-      const navbar = document.getElementById("navbar");
-
-      menuBtn.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-      });
-    </script>
+      <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d138352.7387245178!2d-97.27949630027786!3d49.88411645394517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spizza%20hotline!5e0!3m2!1sen!2sca!4v1780948262221!5m2!1sen!2sca" 
+          width="600" 
+          height="450" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </main>
+    <footer>
+      <p> &#169;Pizza Hotline, used under license. &#169;Pizza Hotline 2026.</p>
+    </br>
+      <p>Pizza images generated using Canva AI.</p>
+    </footer>
   </body>
 </html>

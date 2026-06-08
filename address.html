@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Address - Pizza Hotline</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="images/pizza-hotline-logo.png"
+          alt="Pizza Hotline Logo"
+          id="logo" />
+      </a>
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="fundraising.html">Fundraising</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="text-box">
+        <h2>Delivery Form</h2>
+        <form method="get" action="index.html">
+          <fieldset>
+            <legend>Contact Information</legend>
+            <label for="fname">First Name:</label><br />
+            <input type="text" class="text-input" name="fname" required /><br />
+
+            <label for="lname">Last Name:</label><br />
+            <input type="text" class="text-input" name="lname" required /><br />
+
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              class="text-input"
+              name="email"
+              required /><br />
+
+            <label for="phone-num">Phone Number:</label><br />
+            <input
+              type="tel"
+              class="text-input"
+              name="phone-num"
+              required /><br />
+          </fieldset>
+          <fieldset>
+            <legend>Delivery Information</legend>
+            <label for="address">Delivery Address:</label><br />
+            <input
+              type="text"
+              class="text-input"
+              name="address"
+              required /><br />
+
+            <label for="pickup">Pick-Up or Delivery:</label>
+            <br />
+            <input
+              type="radio"
+              id="pickup"
+              name="pickup"
+              value="pickup"
+              required />
+            <label for="pickup">Pick-Up</label>
+            <input
+              type="radio"
+              id="delivery"
+              name="pickup"
+              value="delivery"
+              required />
+            <label for="delivery">Delivery</label><br />
+          </fieldset>
+          <input type="submit" value="Submit Info" class="button" />
+          <p
+            style="
+              text-align: center;
+              color: #a41919;
+              font-size: 1rem;
+              margin-top: 10px;
+              margin-bottom: 10px;
+            ">
+            *This website was made for a school project. Do NOT enter any
+            sensitive information.
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&#169;Pizza Hotline, used under license. &#169;Pizza Hotline 2026.</p>
+      <br />
+      <p>Pizza images generated using Canva AI.</p>
+    </footer>
+  </body>
+</html>
