@@ -5,6 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Pizza | Pizza Hotline</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <style>
+      #deals {
+        display: block;
+        width: 60%;
+        background-color: ghostwhite;
+        color: #a41919;
+        box-shadow: 0px 0px 30px 5px #818181;
+        border-radius: 10px;
+        margin: 0px auto;
+        margin-bottom: 40px;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .deal-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .deal-content figure,
+      .deal-content p {
+        width: 30%;
+        min-width: 240px;
+        font-weight: bolder;
+        box-shadow: 0px 0px 20px 3px #818181;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 1rem;
+        transition: ease-out 0.2s;
+      }
+
+      .deal-content figure:hover,
+      .deal-content figure:focus {
+        transform: translateY(-5px);
+      }
+
+      .deal-content figcaption {
+        margin-top: 10px;
+        color: #212121;
+      }
+
+      .deal-content img {
+        width: 75%;
+        min-width: 200px;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      #background-image-pizzeria {
+        margin-top: 100px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        text-align: center;
+        background-image: url(images/pizzeria.png);
+        background-size: cover; /* Scales image proportionally to fill the section */
+        background-position: center; /* Keeps the center of the image visible */
+        background-repeat: no-repeat; /* Prevents tiling */
+      }
+
+      #background-image-pizzeria h2 {
+        font-size: clamp(2rem, 6vw, 4rem);
+        color: ghostwhite;
+        text-shadow: 2px 2px 7px #121212;
+        width: 80%;
+        margin: auto;
+      }
+
+      footer {
+        box-shadow: 0px -100px 125px 5px #121212;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -29,42 +101,68 @@
         <a href="address.html" class="button">Enter Address</a>
       </section>
 
-      <section class="deals">
+      <section id="deals">
         <h2>Fresh Deals</h2>
         <div class="deal-content">
           <figure>
             <img src="images/cheese-pizza.jpg" alt="A cheese pizza." />
-            <figcaption> Buy One Cheese Pizza, Get One Free </figcaption>
+            <figcaption>Buy One Cheese Pizza, Get One Free</figcaption>
           </figure>
           <figure>
-            <img src="images/pizza-toppings.jpg" alt="A pizza with many toppings." />
-            <figcaption> Two Free Extra Toppings on Any XL Pizza</figcaption>
+            <img
+              src="images/pizza-toppings.jpg"
+              alt="A pizza with many toppings." />
+            <figcaption>Two Free Extra Toppings on Any XL Pizza</figcaption>
           </figure>
           <figure>
-            <img src="images/pizza-meal.jpg" alt="A meal including a box of pizza, salad, and a can of soda." />
-            <figcaption>Medium Pizza, Drink and Side for only $11.99</figcaption>
+            <img
+              src="images/pizza-meal.jpg"
+              alt="A meal including a box of pizza, salad, and a can of soda." />
+            <figcaption>
+              Medium Pizza, Drink and Side for only $11.99
+            </figcaption>
           </figure>
         </div>
       </section>
+      <section id="background-image-pizzeria">
+        <h2>Proud to serve Manitoba from 29 locations and counting.</h2>
+        <a
+          href="locations.html"
+          class="button"
+          style="border: 3px solid ghostwhite; margin-top: 40px"
+          >Find a Restaurant Near You</a
+        >
+      </section>
     </main>
     <footer>
-      <h2 style="margin-top: 15px;">Pizza Hotline</h2>
+      <h2 style="margin-top: 15px; margin-bottom: 15px">Pizza Hotline</h2>
       <div id="social-icons-bar">
         <a href="https://www.youtube.com/@PizzaHotline22" target="_blank">
-          <img src="images/youtube.png" alt="Youtube logo" class="social-icons"/>
+          <img
+            src="images/youtube.png"
+            alt="Youtube logo"
+            class="social-icons" />
         </a>
         <a href="https://www.instagram.com/pizzahotline22/" target="_blank">
-          <img src="images/insta.png" alt="Instagram logo" class="social-icons"/>
+          <img
+            src="images/insta.png"
+            alt="Instagram logo"
+            class="social-icons" />
         </a>
         <a href="https://x.com/PizzaHotline22" target="_blank">
-          <img src="images/twitter-x.png" alt="X (formerly Twitter) logo" class="social-icons"/>
+          <img
+            src="images/twitter-x.png"
+            alt="X (formerly Twitter) logo"
+            class="social-icons" />
         </a>
         <a href="https://www.facebook.com/pizzahotline22/" target="_blank">
-          <img src="images/facebook.png" alt="Facebook logo" class="social-icons"/>
+          <img
+            src="images/facebook.png"
+            alt="Facebook logo"
+            class="social-icons" />
         </a>
       </div>
-      <p> &#169;Pizza Hotline, used under license. &#169;Pizza Hotline 2026.</p>
-    </br>
+      <p>&#169;Pizza Hotline, used under license. &#169;Pizza Hotline 2026.</p>
       <p>Pizza images generated using Canva AI.</p>
     </footer>
   </body>
