@@ -184,6 +184,13 @@ footer p {
   }
 }
 
+@media (max-width: 500px) {
+  #logo {
+    width: 15%;
+    min-width: 150px;
+  }
+}
+
 @keyframes shrink-grow {
   0% {
     transform: scale(1);
