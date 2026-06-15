@@ -52,54 +52,47 @@ h2 {
 }
 
 nav {
-  top: 0;
-  left: 0;
   background-color: #a41919;
   padding: 1rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; /* Sets the max width to be 800px */
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  list-style: none; /* Takes away the bullet point from the list items */
+  display: flex; /* Makes it a flex container. */
+  flex-wrap: wrap; /* Makes the nav wrap when the window is resized. */
 }
 
 nav ul li {
   width: 15%;
-  float: left;
-  flex: 1 0 150px;
+  flex: 1 0 150px; /* Helps resizing the nav when the window is resized. */
 }
 
 nav ul li a {
   display: inline-block;
-  width: 100%;
+  width: 100%; /* Makes the width the full space available. */
   padding: 0.75rem 1rem;
-  border-right: 3px solid ghostwhite;
-  color: ghostwhite;
-  text-decoration: none;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 1.1rem;
-  transition: ease-out 0.2s;
+  border-right: 3px solid ghostwhite; /* Adds the border that separates the nav links. */
+  color: ghostwhite; /* Ghostwhite text to be easier on eyes. */
+  text-decoration: none; /* Takes away the underline that is usually on links. */
+  text-align: center; /* Centers the text */
+  font-weight: bolder; /* Bolder font */
+  font-size: 1.1rem; /* Sets the font size to 1.1rem */
+  transition: ease-out 0.2s; /* Makes the hover transitions ease out smoothly in 0.2s */
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: #821010;
+  background-color: #821010; /* Changes the button color when hovered over. */
 }
 
 .text-box {
-  width: 60%;
-  background-color: ghostwhite;
-  color: #a41919;
-  box-shadow: 0px 0px 30px 5px #818181;
-  border-radius: 10px;
+  width: 60%; /* 60% width to leave null space on the sides. */
+  background-color: ghostwhite; /* Ghostwhite box color */
+  color: #a41919; /* Red text color */
+  box-shadow: 0px 0px 30px 5px #818181; /* Adds a slight shadow under the box */
+  border-radius: 10px; /* Rounds off the boxes */
   margin: 40px auto;
   padding: 1rem;
   text-align: center;
@@ -111,47 +104,88 @@ nav ul li a:focus {
 
 .button {
   display: inline-block;
-  margin: 0 auto;
+  margin: 0 auto; /* Centers the button. */
   padding: 0.5rem 2rem;
-  background-color: #a41919;
-  color: ghostwhite;
-  text-decoration: none;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: ease-out 0.1s;
-  animation: shrink-grow 3s ease-in-out infinite;
+  background-color: #a41919; /* Sets the button color to the main red of the website. */
+  color: ghostwhite; /* Ghostwhite text to be easier on eyes. */
+  text-decoration: none; /* Takes away the underline that is usually on links. */
+  border: none; /* Makes sure there is no border. */
+  border-radius: 30px; /* Rounds off the button. */
+  font-weight: bold; /* Bolder font to stand out more. */
+  transition: ease-out 0.1s; /* Makes the hover transitions ease out smoothly in 0.1s */
+  animation: shrink-grow 3s ease-in-out infinite; /* This animation slowly changes the size of the button over time. I'ts subtle so the user isn't too distracted by it. */
 }
 
 .button:hover,
 .button:focus {
-  background-color: #821010;
+  background-color: #821010; /* Changes the button color when hovered over. */
 }
 
 .text-input {
   display: inline-block;
-  margin: 10px auto;
-  padding: 0.5rem 2rem;
+  margin: 10px auto; /* Centers the input */
+  padding: 0.5rem 2rem; /* Adds padding inside the input. */
   background-color: ghostwhite;
   color: #121212;
-  text-decoration: none;
-  border: 1px solid #121212;
-  border-radius: 30px;
-  font-weight: normal;
-  transition: ease-out 0.2s;
+  text-decoration: none; /* Takes away any text decoration that might be on the text. */
+  border: 1px solid #121212; /* Adds a border around the input. */
+  border-radius: 30px; /* Rounds off the border */
+  font-weight: normal; /* Makes sure the text you put in isn't bold */
 }
 
 footer {
+  /* Sets the footer to take up the full width and height that it needs to. This takes away the weird blank space on the edges. */
   width: 100%;
   height: 100%;
   padding: 1rem;
   background-color: #a41919;
   color: ghostwhite;
-  text-align: center;
+  text-align: center; /* Centers the text */
 }
 
 footer p {
   margin: 10px;
+}
+
+.deal-content {
+  display: flex; /* Makes this div a flex container. */
+  flex-wrap: wrap; /* Set the elements inside this container to wrap when the window is being resized. This helps make the website's layout responsive. */
+  justify-content: space-around; /* Adds space around all items in the flexbox, and adds more space in between each element. */
+}
+
+.deal-content figure {
+  width: 30%;
+  /*
+    Sets the figures to only be 30% as wide as the parent .deal-content div. 
+    I chose to make it 30% because there are 3 elements in each row, so it would amount 
+    to 90% after adding all the widths. That would leave 10% of null space to go around the content.
+  */
+  min-width: 240px; /* Makes it so that these elements can't get less than 240px wide. */
+  font-weight: bolder;
+  box-shadow: 0px 0px 20px 3px #818181; /* Adds a slight shadow under the figure elements to make them look more like cards. */
+  border-radius: 10px; /* This rounds off the corners for a smoother design. */
+  margin: 20px auto; /* Centers it horizontally and adds 20px of margin in the top and bottom. */
+  padding: 1rem; /* Adds 1rem of space around the figure which makes the design look cleaner. */
+  transition: ease-out 0.2s; /* This makes it so that the translation I'm adding later will transition smoothly in 0.2s while easing out at the end. */
+}
+
+.deal-content figure:hover,
+.deal-content figure:focus {
+  transform: translateY(
+    -5px
+  ); /* Adds a short hover animation that could indicate to the user that the card is clickable. Could be useful if I add a shopping cart feature later on, but for now it's just for looks. */
+}
+
+.deal-content figcaption {
+  margin-top: 10px; /* Moves the text lower by 10px */
+  color: #212121; /* Changed the text color to have more contrast with the background since readers need to be able to read it well. */
+}
+
+.deal-content img {
+  width: 75%; /* Makes the image 75% as wide as the figure, which is its parent element. */
+  min-width: 200px; /* Makes it so that the image can't get less than 200px wide. */
+  height: auto;
+  border-radius: 10px;
 }
 
 #social-icons-bar {
@@ -170,6 +204,35 @@ footer p {
 .social-icons {
   width: 40px;
   height: auto;
+}
+
+/* This code styles the Back to Top button. */
+#back-to-top {
+  /* This positions the button at the bottom right corner of the page at all times. */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  /* This gives the button a dark red background, white text, a white border and a shadow. */
+  background: #a41919;
+  color: ghostwhite;
+  border: 3px solid ghostwhite;
+  border-radius: 60px;
+  box-shadow: #212121 0px 0px 20px;
+  padding: 10px 25px;
+  margin-bottom: 1.5%;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  /* This makes the button change sizes smoothly in 0.3s when the user hovers over it. */
+  transition: ease-out 0.2s;
+  animation: fade 1.3s ease-in-out forwards;
+}
+
+/* This code changes the styling of the button when the user hovers over it. */
+#back-to-top:hover {
+  transform: scale(
+    1.1
+  ); /* This makes the button bigger when the user hovers over it. */
 }
 
 @media (max-width: 1112px) {

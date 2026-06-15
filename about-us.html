@@ -3,22 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Locations | Pizza Hotline</title>
+    <title>Our Menu | Pizza Hotline</title>
     <!-- Links to the external stylesheet. -->
     <link rel="stylesheet" href="stylesheets/style.css" />
     <!-- Internal styling for this page -->
     <style>
-      #map {
-        display: flex; /* Made the iframe a flexbox so I could center it with justify-content. */
-        justify-content: center;
-      }
-
-      #map iframe {
-        border: 5px solid #a41919; /* Adds a heavier border around the iframe. */
-        border-radius: 10px; /* Rounds the corners. */
-        margin: 20px 0 40px 0; /* Adds 20px of margin on top, 40px at the bottom, and nothing on the left and right. */
-        box-shadow: 0px 0px 20px 3px #818181;
-        flex: 0.3 0 200px; /* Controls the resizing of the iframe. It won't get smaller than 200px, and will grow slowly as the window gets bigger. */
+      #about-us-image {
+        display: block;
+        width: 30%;
+        margin: 60px auto;
+        border: 5px solid #a41919;
+        border-radius: 10px;
+        box-shadow: 0px 0px 30px 5px #818181;
       }
     </style>
   </head>
@@ -42,27 +38,30 @@
     </header>
     <main>
       <section class="text-box">
-        <h2>Our Locations</h2>
+        <h2>About Us</h2>
         <p>
-          Our brand is proud to serve high-quality pizza in 29 locations across
-          Manitoba. We have restaurants in Winnipeg, Brandon, Steinbach,
-          Winkler, Selkirk, Stonewall, and Portage La Prairie. We work every day
-          to bring you the best pizza Manitoba has to offer!
+          Pizza Hotline has been serving communities across Manitoba for
+          decades, becoming one of the province’s most recognized local pizza
+          chains. Founded in 1986 by Jerry and Theresa Cianflone, Pizza Hotline
+          has built its reputation on great service, quality ingredients, and
+          delicious meals.
+        </p>
+        </br>
+        <p>
+          From pizzas covered with fresh toppings to wings and sides, Pizza
+          Hotline focuses on offering convenient and satisfying options for
+          every occasion. Whether it’s lunch, dinner, or a late-night snack,
+          we've made reliable delivery a core part of our customer experience.
+        </p>
+        </br>
+        <p>
+          Proudly based in Manitoba, Pizza Hotline continues to support the
+          community while expanding its reach across the province. With our
+          great taste, value, and service, our company is dedicated to making
+          every meal enjoyable for customers across the province.
         </p>
       </section>
-
-      <section id="map">
-        <!-- Copied embed code from Google Maps. -->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d138352.7387245178!2d-97.27949630027786!3d49.88411645394517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spizza%20hotline!5e0!3m2!1sen!2sca!4v1780948262221!5m2!1sen!2sca"
-          width="600"
-          height="450"
-          title="Google Maps showing all Pizza Hotline locations in Winnipeg"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </section>
+      <img src="images/pizza-hotline-brandon.jpg" alt="Pizza Hotline location in Brandon, Manitoba." id="about-us-image"/>
       <!-- This is the back to top button. &#8593; is the HTML entity for an up arrow. -->
       <a href="#top" id="back-to-top" title="Back to Top">&#8593;</a>
     </main>
