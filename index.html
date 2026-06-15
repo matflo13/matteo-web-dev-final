@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Pizza | Pizza Hotline</title>
+    <!-- Links to the external stylesheet. -->
     <link rel="stylesheet" href="stylesheets/style.css" />
     <!-- Internal styling for this page -->
-    <style> 
+    <style>
       #deals {
         display: block; /* Makes the section a block element so that it will take up a full line in the website. */
         width: 60%; /* This section will take up 60% of the width of the page.*/
@@ -26,7 +27,7 @@
       }
 
       .deal-content figure {
-        width: 30%; 
+        width: 30%;
         /*
           Sets the figures to only be 30% as wide as the parent .deal-content div. 
           I chose to make it 30% because there are 3 elements in each row, so it would amount 
@@ -43,7 +44,9 @@
 
       .deal-content figure:hover,
       .deal-content figure:focus {
-        transform: translateY(-5px); /* Adds a short hover animation that could indicate to the user that the card is clickable. Could be useful if I add a shopping cart feature later on, but for now it's just for looks. */
+        transform: translateY(
+          -5px
+        ); /* Adds a short hover animation that could indicate to the user that the card is clickable. Could be useful if I add a shopping cart feature later on, but for now it's just for looks. */
       }
 
       .deal-content figcaption {
@@ -69,7 +72,11 @@
       }
 
       #background-image-pizzeria h2 {
-        font-size: clamp(2rem, 6vw, 4rem); /* I used clamp to make it so that the font would shrink down to 2rem at the smallest, and grow to 4rem at the biggest, with 6vw being the preferred size.*/
+        font-size: clamp(
+          2rem,
+          6vw,
+          4rem
+        ); /* I used clamp to make it so that the font would shrink down to 2rem at the smallest, and grow to 4rem at the biggest, with 6vw being the preferred size.*/
         color: ghostwhite; /* Used ghostwhite to be easier on the eyes. */
         text-shadow: 2px 2px 7px #121212; /* This adds a shadow under the text with and offset for 2px to the bottom right, and a 7px blur. */
         width: 80%; /* Sets the width to 80% so that there is 10% of null space on the sides of the text. */
@@ -83,17 +90,19 @@
   </head>
   <body>
     <header>
+      <!-- The logo in the top left will link back to the homepage when clicked. -->
       <a href="index.html">
         <img
           src="images/pizza-hotline-logo.png"
           alt="Pizza Hotline Logo"
           id="logo" />
       </a>
+      <!-- Navbar for the website. I used flexbox styling to make it responsive. -->
       <nav id="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="locations.html">Locations</a></li>
-          <li><a href="fundraising.html">Fundraising</a></li>
+          <li><a href="menu.html">Menu</a></li>
           <li><a href="about-us.html">About Us</a></li>
         </ul>
       </nav>
@@ -104,8 +113,10 @@
         <a href="address.html" class="button">Enter Address</a>
       </section>
 
+      <!-- This is the container surrounding all the deal cards. -->
       <section id="deals">
         <h2>Fresh Deals</h2>
+        <!-- This is the class for each card. Each figure is a card with the image and caption on it. -->
         <div class="deal-content">
           <figure>
             <img src="images/cheese-pizza.jpg" alt="A cheese pizza." />
@@ -127,6 +138,8 @@
           </figure>
         </div>
       </section>
+
+      <!-- This section will have the background image. -->
       <section id="background-image-pizzeria">
         <h2>Proud to serve Manitoba from 29 locations and counting.</h2>
         <a
@@ -139,6 +152,7 @@
     </main>
     <footer>
       <h2 style="margin-top: 15px; margin-bottom: 15px">Pizza Hotline</h2>
+      <!-- This div is for the flexbox containing all the social media links for Pizza Hotline. -->
       <div id="social-icons-bar">
         <a href="https://www.youtube.com/@PizzaHotline22" target="_blank">
           <img
@@ -165,7 +179,9 @@
             class="social-icons" />
         </a>
       </div>
+      <!-- The exact same text found at the bottom of the original Pizza Hotline website. -->
       <p>&#169;Pizza Hotline, used under license. &#169;Pizza Hotline 2026.</p>
+      <!-- Crediting Canva AI for the pictures. -->
       <p>Pizza images generated using Canva AI.</p>
     </footer>
   </body>

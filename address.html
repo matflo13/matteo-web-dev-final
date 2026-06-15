@@ -4,30 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enter Address - Pizza Hotline</title>
+    <!-- Links to the external stylesheet. -->
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- Internal styling for this page -->
     <style>
       fieldset {
-        width: 50%;
-        margin: 0 auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 1rem;
-        border: 2px solid #121212;
-        border-radius: 10px;
+        width: 50%; /* Makes each fieldset 50% of the width of the form container. */
+        margin: 20px auto; /* Centers the fieldset horizontally and gives 20px of margin in the top and bottom. */
+        padding: 1rem; /* Adds 1rem of spacing inside the fieldset to add a bit of null space. */
+        border: 2px solid #121212; /* Turns the border black */
+        border-radius: 10px; /* Rounds off the corners of the border. */
       }
 
       input {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px 0; /* Gives 20px of margin in the top and bottom. */
       }
 
       label {
-        font-weight: bolder;
-        color: #a41919;
+        font-weight: bolder; /* Makes the labels stand out a bit more */
+        color: #a41919; /* Sets the text color to the main color of the website */
       }
     </style>
   </head>
   <body>
+    <!-- Same header as the rest of the pages. -->
     <header>
       <a href="index.html">
         <img
@@ -39,15 +39,18 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="locations.html">Locations</a></li>
-          <li><a href="fundraising.html">Fundraising</a></li>
+          <li><a href="menu.html">Menu</a></li>
           <li><a href="about-us.html">About Us</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <!-- Box containing the form, uses the basic .text-box class to style it like the other boxes on the website. -->
       <section class="text-box">
         <h2>Delivery Form</h2>
+        <!-- Used the get method since I don't have a back-end. The action attribute sends you back to the homepage after you submit the form. -->
         <form method="get" action="index.html">
+          <!-- Fieldset for contact info.  -->
           <fieldset>
             <legend>Contact Information</legend>
             <label for="fname">First Name:</label><br />
@@ -70,6 +73,7 @@
               name="phone-num"
               required /><br />
           </fieldset>
+          <!-- Fieldset for delivery info. -->
           <fieldset>
             <legend>Delivery Information</legend>
             <label for="address">Delivery Address:</label><br />
@@ -97,6 +101,7 @@
             <label for="delivery">Delivery</label><br />
           </fieldset>
           <input type="submit" value="Submit Info" class="button" />
+          <!-- I used inline styling here because this is the only place in the whole website where the parapgraph will look like this. -->
           <p
             style="
               text-align: center;
@@ -111,6 +116,7 @@
         </form>
       </section>
     </main>
+    <!-- Same exact footer as all other pages. -->
     <footer>
       <h2 style="margin-top: 15px; margin-bottom: 15px">Pizza Hotline</h2>
       <div id="social-icons-bar">
