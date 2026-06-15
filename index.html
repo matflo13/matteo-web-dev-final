@@ -5,76 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Pizza | Pizza Hotline</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <style>
+    <!-- Internal styling for this page -->
+    <style> 
       #deals {
-        display: block;
-        width: 60%;
-        background-color: ghostwhite;
-        color: #a41919;
-        box-shadow: 0px 0px 30px 5px #818181;
-        border-radius: 10px;
-        margin: 0px auto;
-        margin-bottom: 40px;
-        padding: 1rem;
-        text-align: center;
+        display: block; /* Makes the section a block element so that it will take up a full line in the website. */
+        width: 60%; /* This section will take up 60% of the width of the page.*/
+        background-color: ghostwhite; /* I used ghostwhite because pure white is hard the eyes. */
+        color: #a41919; /* Sets the h2 to be a dark red color, keeping with the theme of the website. */
+        box-shadow: 0px 0px 30px 5px #818181; /* Adds a shadow under the box for a cleaner look. */
+        border-radius: 10px; /* Rounds off the corners of the box */
+        margin: 0px auto 40px auto; /* Centers the box horizontally and adds 40px of margin under it. */
+        padding: 1rem; /* Adds 1rem of padding inside the box. */
+        text-align: center; /* Centers the h2 inside this container. */
       }
 
       .deal-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: flex; /* Makes this div a flex container. */
+        flex-wrap: wrap; /* Set the elements inside this container to wrap when the window is being resized. This helps make the website's layout responsive. */
+        justify-content: space-around; /* Adds space around all items in the flexbox, and adds more space in between each element. */
       }
 
-      .deal-content figure,
-      .deal-content p {
-        width: 30%;
-        min-width: 240px;
+      .deal-content figure {
+        width: 30%; 
+        /*
+          Sets the figures to only be 30% as wide as the parent .deal-content div. 
+          I chose to make it 30% because there are 3 elements in each row, so it would amount 
+          to 90% after adding all the widths. That would leave 10% of null space to go around the content.
+        */
+        min-width: 240px; /* Makes it so that these elements can't get less than 240px wide. */
         font-weight: bolder;
-        box-shadow: 0px 0px 20px 3px #818181;
-        border-radius: 10px;
-        margin: 20px auto;
-        padding: 1rem;
-        transition: ease-out 0.2s;
+        box-shadow: 0px 0px 20px 3px #818181; /* Adds a slight shadow under the figure elements to make them look more like cards. */
+        border-radius: 10px; /* This rounds off the corners for a smoother design. */
+        margin: 20px auto; /* Centers it horizontally and adds 20px of margin in the top and bottom. */
+        padding: 1rem; /* Adds 1rem of space around the figure which makes the design look cleaner. */
+        transition: ease-out 0.2s; /* This makes it so that the translation I'm adding later will transition smoothly in 0.2s while easing out at the end. */
       }
 
       .deal-content figure:hover,
       .deal-content figure:focus {
-        transform: translateY(-5px);
+        transform: translateY(-5px); /* Adds a short hover animation that could indicate to the user that the card is clickable. Could be useful if I add a shopping cart feature later on, but for now it's just for looks. */
       }
 
       .deal-content figcaption {
-        margin-top: 10px;
-        color: #212121;
+        margin-top: 10px; /* Moves the text lower by 10px */
+        color: #212121; /* Changed the text color to have more contrast with the background since readers need to be able to read it well. */
       }
 
       .deal-content img {
-        width: 75%;
-        min-width: 200px;
+        width: 75%; /* Makes the image 75% as wide as the figure, which is its parent element. */
+        min-width: 200px; /* Makes it so that the image can't get less than 200px wide. */
         height: auto;
         border-radius: 10px;
       }
 
       #background-image-pizzeria {
-        margin-top: 100px;
-        padding-top: 200px;
-        padding-bottom: 200px;
-        text-align: center;
-        background-image: url(images/pizzeria.png);
-        background-size: cover; /* Scales image proportionally to fill the section */
-        background-position: center; /* Keeps the center of the image visible */
-        background-repeat: no-repeat; /* Prevents tiling */
+        margin-top: 100px; /* Adds 100px of space between this section and the deals section above it, which gives some breathing room before the next section. */
+        padding: 200px 0px; /* Adds 200px of padding in the top and bottom to make the background image take up more space vertically on the page. */
+        text-align: center; /* Centers the text in this section */
+        background-image: url(images/pizzeria.png); /* Sets the background image to an image of inside a pizza kitchen that I generated with Canva AI. */
+        background-size: cover; /* Scales image to fill the section */
+        background-position: center; /* Makes sure the image is always centered */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
       }
 
       #background-image-pizzeria h2 {
-        font-size: clamp(2rem, 6vw, 4rem);
-        color: ghostwhite;
-        text-shadow: 2px 2px 7px #121212;
-        width: 80%;
-        margin: auto;
+        font-size: clamp(2rem, 6vw, 4rem); /* I used clamp to make it so that the font would shrink down to 2rem at the smallest, and grow to 4rem at the biggest, with 6vw being the preferred size.*/
+        color: ghostwhite; /* Used ghostwhite to be easier on the eyes. */
+        text-shadow: 2px 2px 7px #121212; /* This adds a shadow under the text with and offset for 2px to the bottom right, and a 7px blur. */
+        width: 80%; /* Sets the width to 80% so that there is 10% of null space on the sides of the text. */
+        margin: auto; /* Centers the text */
       }
 
       footer {
-        box-shadow: 0px -100px 125px 5px #121212;
+        box-shadow: 0px -100px 125px 5px #121212; /* I added a shadow to the footer so that it would contrast more with the background image. */
       }
     </style>
   </head>
